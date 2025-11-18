@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.1password
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Database files
+*.sqlite
+*.db
+data/
+
+# Security - ensure no credentials leak
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Personal files (not part of project)
+*.ics
+*.pdf
+Enneagram-*.md
+
+# Claude Code local settings (user-specific)
+.claude/settings.local.json

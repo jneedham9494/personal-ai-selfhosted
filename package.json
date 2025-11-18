@@ -1,0 +1,52 @@
+{
+  "name": "personal-ai-assistant",
+  "version": "1.0.0",
+  "description": "Intelligent AI assistant with Obsidian integration and messaging platform bots for cross-device knowledge management",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:1password": "node src/index.js --use-1password",
+    "start:op": "op run --env-file=.env.1password -- node src/index.js",
+    "dev": "node --watch src/index.js",
+    "dev:1password": "node --watch src/index.js --use-1password",
+    "dev:op": "op run --env-file=.env.1password -- node --watch src/index.js",
+    "test": "jest",
+    "setup": "node scripts/setup.js",
+    "setup:1password": "node scripts/setup-1password.js",
+    "setup:complete": "node scripts/complete-setup-guide.js",
+    "get-chat-id": "node scripts/get-telegram-chat-id.js",
+    "configure-obsidian": "node scripts/configure-obsidian.js",
+    "test-obsidian": "node scripts/test-obsidian-integration.js"
+  },
+  "keywords": [
+    "ai-assistant",
+    "obsidian",
+    "claude",
+    "telegram-bot",
+    "knowledge-management",
+    "personal-assistant"
+  ],
+  "author": "jackdev",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
+    "node-telegram-bot-api": "^0.64.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "chokidar": "^3.5.3",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.2",
+    "sqlite3": "^5.1.6",
+    "dotenv": "^16.3.1",
+    "cron": "^3.1.6",
+    "natural": "^6.5.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
