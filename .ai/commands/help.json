@@ -1,0 +1,24 @@
+{
+  "name": "help",
+  "description": "Show available commands and usage information",
+  "syntax": "/help [command]",
+  "category": "system",
+  "examples": [
+    "/help",
+    "/help vmodel",
+    "/help search"
+  ],
+  "parameters": {
+    "command": {
+      "type": "string",
+      "required": false,
+      "description": "Specific command to get help for"
+    }
+  },
+  "handler": "help_handler",
+  "metadata": {
+    "version": "1.0.0",
+    "author": "system",
+    "requires": []
+  }
+}

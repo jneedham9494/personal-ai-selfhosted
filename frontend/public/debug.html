@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug</title>
+</head>
+<body>
+    <h1>Debug Information</h1>
+    <div id="info"></div>
+    <script>
+        const info = document.getElementById('info');
+
+        // Test 1: Can we run JavaScript?
+        info.innerHTML += '<p>✅ JavaScript is running</p>';
+
+        // Test 2: Can we load ES modules?
+        try {
+            import('/@vite/client').then(() => {
+                info.innerHTML += '<p>✅ Vite client loads</p>';
+            }).catch(err => {
+                info.innerHTML += '<p>❌ Vite client failed: ' + err.message + '</p>';
+            });
+        } catch (err) {
+            info.innerHTML += '<p>❌ Import failed: ' + err.message + '</p>';
+        }
+
+        // Test 3: Can we see React?
+        setTimeout(() => {
+            if (window.React) {
+                info.innerHTML += '<p>✅ React is available</p>';
+            } else {
+                info.innerHTML += '<p>❌ React not found</p>';
+            }
+        }, 2000);
+
+        // Test 4: Console errors
+        window.addEventListener('error', (e) => {
+            info.innerHTML += '<p style="color:red">❌ Error: ' + e.message + '</p>';
+        });
+    </script>
+</body>
+</html>

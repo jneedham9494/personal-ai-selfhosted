@@ -1,0 +1,24 @@
+{
+  "name": "search",
+  "description": "Search Obsidian vault for notes and information",
+  "syntax": "/search <query>",
+  "category": "knowledge",
+  "examples": [
+    "/search trip planning",
+    "/search meeting notes 2025",
+    "/search project goals"
+  ],
+  "parameters": {
+    "query": {
+      "type": "string",
+      "required": true,
+      "description": "Search query to find in vault"
+    }
+  },
+  "handler": "search_handler",
+  "metadata": {
+    "version": "1.0.0",
+    "author": "system",
+    "requires": ["tools", "obsidian"]
+  }
+}
