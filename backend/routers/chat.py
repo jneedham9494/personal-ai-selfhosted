@@ -7,7 +7,7 @@ import logging
 sys.path.append('..')
 from services.llm_service import LLMService
 from services.commands import CommandParser
-from services.obsidian_service import ObsidianService
+from services.obsidian import ObsidianService
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

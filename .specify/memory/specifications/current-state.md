@@ -25,6 +25,11 @@ Personal AI Self-Hosted is a privacy-first AI assistant with local LLM and Obsid
 - [x] Markdown rendering with GitHub flavors
 - [x] E2E tests for UI (10 Playwright tests)
 - [x] Path traversal security checks
+- [x] **Telegram bot service** (11 commands, conversation state)
+- [x] **Claude API service** (rate-limited alternative to Ollama)
+- [x] **Enhanced Obsidian service** (projects, goals, conversation saving)
+- [x] **Nudging service** (5 scheduled proactive reminders)
+- [x] **Metadata extraction** (mood, category, action items)
 
 ### Prepared but Not Implemented
 - [ ] JWT authentication
@@ -33,7 +38,7 @@ Personal AI Self-Hosted is a privacy-first AI assistant with local LLM and Obsid
 - [ ] Rate limiting
 - [ ] File write operations
 - [ ] WebSocket streaming
-- [ ] Advanced commands beyond /search and /help
+- [ ] 1Password integration (service written, not integrated)
 
 ---
 
@@ -47,11 +52,14 @@ Personal AI Self-Hosted is a privacy-first AI assistant with local LLM and Obsid
 | Chat Router | Complete | 134 | No tests |
 | Vault Router | Complete | 56 | No tests |
 | LLM Service | Complete | 80 | No tests |
-| Obsidian Service | Complete | 206 | No tests |
+| Obsidian Service (pkg) | Complete | ~700 | No tests |
 | Command Parser | Complete | 168 | No tests |
 | File Tools | Complete | 247 | No tests |
+| **Telegram Bot (pkg)** | Complete | ~450 | No tests |
+| **Claude Service** | Complete | ~300 | No tests |
+| **Nudging Service** | Complete | ~280 | No tests |
 
-**Total Backend:** ~960 lines, 0% test coverage
+**Total Backend:** ~2,500 lines, 0% test coverage
 
 ### Frontend
 
@@ -95,6 +103,12 @@ Personal AI Self-Hosted is a privacy-first AI assistant with local LLM and Obsid
 - pydantic 2.5.0
 - ollama 0.1.6
 - python-dotenv 1.0.0
+- **python-telegram-bot 21.0** (Telegram integration)
+- **APScheduler 3.10.4** (nudging scheduler)
+- **python-frontmatter 1.1.0** (Obsidian YAML parsing)
+- **anthropic 0.18.1** (Claude API)
+- **aiofiles 23.2.1** (async file I/O)
+- **watchdog 4.0.0** (file watching)
 
 ### Backend - Installed but Unused
 - sqlalchemy 2.0.23 (database)
@@ -185,12 +199,19 @@ Personal AI Self-Hosted is a privacy-first AI assistant with local LLM and Obsid
 ## Files Summary
 
 ```
-Total Python (backend): 9 files, ~960 lines
+Total Python (backend): 17 files, ~2,500 lines
 Total TypeScript (frontend): 4 files, ~280 lines
 Total Tests: 1 file, 10 E2E tests
-Total Lines of Code: ~1,300 (excluding deps)
+Total Lines of Code: ~2,800 (excluding deps)
+
+New packages added:
+- backend/services/telegram/ (3 files)
+- backend/services/obsidian/ (4 files)
+- backend/services/claude_service.py
+- backend/services/nudging_service.py
 ```
 
 ---
 
 **Last Updated:** 2025-11-18
+**Merged from:** personal-ai-assistant (Telegram, nudging, Claude, enhanced Obsidian)

@@ -3,7 +3,7 @@ from typing import Optional
 import sys
 import logging
 sys.path.append('..')
-from services.obsidian_service import ObsidianService
+from services.obsidian import ObsidianService
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

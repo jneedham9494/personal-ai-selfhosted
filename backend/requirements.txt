@@ -11,3 +11,15 @@ httpx==0.25.2
 python-dotenv==1.0.0
 ollama==0.1.6
 chromadb==0.4.18
+
+# Telegram bot integration
+python-telegram-bot==21.0
+APScheduler==3.10.4
+
+# Enhanced Obsidian features
+python-frontmatter==1.1.0
+watchdog==4.0.0
+aiofiles==23.2.1
+
+# Claude API (alternative to Ollama)
+anthropic==0.18.1
