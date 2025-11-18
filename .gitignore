@@ -47,6 +47,3 @@ Enneagram-*.md
 
 # Claude Code local settings (user-specific)
 .claude/settings.local.json
-
-# Local Obsidian vault copy (personal data)
-obsidian-vault-local/
